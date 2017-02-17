@@ -1,24 +1,26 @@
 
-import java.util.ArrayList;
+
 
 
 public class Persona {
-    private String nombre;
-    private String edad;
-    private String ID;
-    private String boleto;
-    private String departamentos;
-    private String dinero;
+    protected String nombre;
+    protected String edad;
+    protected String ID;
+    protected String boleto;
+    protected String departamentos;
+    protected String dinero;
+    protected String empleo;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String edad, String ID, String boleto, String dinero) {
+    public Persona(String nombre, String edad, String ID, String boleto, String dinero, String empleo) {
         this.nombre = nombre;
         this.edad = edad;
         this.ID = ID;
         this.boleto = boleto;
         this.dinero = dinero;
+        this.empleo=empleo;
     }
 
     public String getNombre() {
@@ -69,10 +71,19 @@ public class Persona {
         this.dinero = dinero;
     }
 
+    public String getEmpleo() {
+        return empleo;
+    }
+
+    public void setEmpleo(String empleo) {
+        this.empleo = empleo;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", ID=" + ID + ", boleto=" + boleto + ", departamentos=" + departamentos + ", dinero=" + dinero + '}';
+        return nombre;
     }
+
     
     
 }
