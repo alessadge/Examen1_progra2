@@ -956,8 +956,8 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         int num = 1; 
         int tam=0, tam1=0;
-        int cont;
-        
+        int cont=0, dinero;
+        String cont1;
         if(bttn1.isSelected()){
             tam = 3;
             cont = 350;
@@ -974,14 +974,22 @@ public class Admin extends javax.swing.JFrame {
             tam = 7;
             cont = 1000000;
         }
+        cbPersonas3.getItemAt(cbPersonas3.getSelectedIndex());
+        cont1=lista.get(cbPersonas3.getSelectedIndex()).getDinero();
+        dinero=Integer.parseInt(cont1);
+        dinero=dinero-cont;
+        cont1=""+dinero;
+        lista.get(cbPersonas3.getSelectedIndex()).setDinero(cont1);
         int [][] c = new int[tam*2][tam*2];
-        int [] b = new int[tam];
+        String m = "";
            while(tam1<tam) {
                llenar(c,num);
                pascal(c);
-               b[tam1]=random(c,num);
+               m = m+random(c,num);
                tam1++;
            }    
+          
+           listaBoletos.add(m);
     }//GEN-LAST:event_jButton5MouseClicked
 
     /**
@@ -1104,6 +1112,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> txtPolitico1;
     // End of variables declaration//GEN-END:variables
 ArrayList<Persona> lista = new ArrayList();
+ArrayList<String> listaBoletos = new ArrayList();
 static public int[][] llenar(int [][] x, int num){
     for (int i = 0; i < x.length-1; i++) {
         for (int j = 0; j < x.length-1; j++) {
