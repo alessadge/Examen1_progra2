@@ -1099,7 +1099,19 @@ public class Admin extends javax.swing.JFrame {
 
     private void rifa1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rifa1MouseClicked
         // TODO add your handling code here:
-        
+        String a;
+        int b,c;
+        a=rifa.get(0);
+        b=Integer.parseInt(a);
+        a=rifa.get(1);
+        c=Integer.parseInt(a);
+        if(b>c){
+            JOptionPane.showMessageDialog(null, b+" gano.");
+            rifa.remove(0);
+        }else{
+            JOptionPane.showMessageDialog(null, c+" gano.");
+            rifa.remove(1);
+        }
     }//GEN-LAST:event_rifa1MouseClicked
 
     /**
