@@ -35,6 +35,7 @@ public class Admin extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jPanel13 = new javax.swing.JPanel();
         tabMain = new javax.swing.JTabbedPane();
         panelAgregar = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -106,6 +107,24 @@ public class Admin extends javax.swing.JFrame {
         bttn3 = new javax.swing.JRadioButton();
         bttn4 = new javax.swing.JRadioButton();
         jButton5 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        rifa1 = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 173, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -734,6 +753,90 @@ public class Admin extends javax.swing.JFrame {
 
         tabMain.addTab("Ventas", jPanel1);
 
+        rifa1.setText("RIFA!");
+        rifa1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rifa1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(rifa1)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(rifa1)
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Rifa 1", jPanel3);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 173, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Rifa 2", jPanel11);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 173, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Rifa3", jPanel12);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 173, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Rifa 4", jPanel14);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(219, 219, 219)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(164, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(201, Short.MAX_VALUE))
+        );
+
+        tabMain.addTab("Rifa", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -980,6 +1083,7 @@ public class Admin extends javax.swing.JFrame {
         dinero=dinero-cont;
         cont1=""+dinero;
         lista.get(cbPersonas3.getSelectedIndex()).setDinero(cont1);
+        
         int [][] c = new int[tam*2][tam*2];
         String m = "";
            while(tam1<tam) {
@@ -988,9 +1092,15 @@ public class Admin extends javax.swing.JFrame {
                m = m+random(c,num);
                tam1++;
            }    
-          
-           listaBoletos.add(m);
+           cont1=""+num;
+           lista.get(cbPersonas3.getSelectedIndex()).setBoleto(cont1);
+           rifa.add(cont1);
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void rifa1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rifa1MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_rifa1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1079,6 +1189,12 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1086,9 +1202,11 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel panelAgregar;
     private javax.swing.JPanel panelEliminar;
     private javax.swing.JPanel panelModificar;
+    private javax.swing.JButton rifa1;
     private javax.swing.JTabbedPane tabEmpleado;
     private javax.swing.JTabbedPane tabEmpleado1;
     private javax.swing.JTabbedPane tabMain;
@@ -1112,7 +1230,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> txtPolitico1;
     // End of variables declaration//GEN-END:variables
 ArrayList<Persona> lista = new ArrayList();
-ArrayList<String> listaBoletos = new ArrayList();
+ArrayList<String> rifa = new ArrayList();
 static public int[][] llenar(int [][] x, int num){
     for (int i = 0; i < x.length-1; i++) {
         for (int j = 0; j < x.length-1; j++) {
